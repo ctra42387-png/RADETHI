@@ -3,8 +3,8 @@ import { ExamConfig, GeneratedExamData } from "../types";
 
 // Sử dụng model có khả năng suy luận tốt để tính toán số liệu bảng
 // FIX: Updated to a recommended model for complex reasoning and compatibility with thinkingConfig.
-const EXAM_GENERATION_MODEL_NAME = 'gemini-3-pro-preview'; 
-const ASSISTANT_MODEL_NAME = 'gemini-3-flash-preview';
+const EXAM_GENERATION_MODEL_NAME = 'gemini-2.5-pro'; 
+const ASSISTANT_MODEL_NAME = 'gemini-2.5-pro';
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
