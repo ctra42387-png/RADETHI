@@ -3,8 +3,8 @@ import { ExamConfig, GeneratedExamData } from "../types";
 
 // Sử dụng model có khả năng suy luận tốt để tính toán số liệu bảng
 // FIX: Updated to a recommended model for complex reasoning and compatibility with thinkingConfig.
-const EXAM_GENERATION_MODEL_NAME = 'gemini-3-pro-preview'; 
-const ASSISTANT_MODEL_NAME = 'gemini-3-pro-preview';
+const EXAM_GENERATION_MODEL_NAME = 'gemini-3-flash-preview'; 
+const ASSISTANT_MODEL_NAME = 'gemini-3-flash-preview';
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -30,7 +30,7 @@ async function generateWithRetry(ai: GoogleGenAI, params: any, retries = 3, base
 }
 
 export const getAIAssistantResponse = async (question: string, context: ExamConfig): Promise<string> => {
-    const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
     
     const systemInstruction = `
         Bạn là một trợ lý AI chuyên gia về giáo dục và khảo thí tại Việt Nam, đặc biệt am hiểu về Công văn 7991. 
