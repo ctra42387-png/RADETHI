@@ -1,0 +1,45 @@
+/* Custom Animations */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(to right, #3b82f6 10%, #22d3ee 40%, #6366f1 60%, #3b82f6 90%);
+  background-size: 2000px auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shimmer 8s linear infinite;
+  color: transparent;
+}
+
+/* Remove default number input arrows */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Styling for tables in markdown content (e.g., answers) */
+.markdown-content table {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+  border: 1px solid #cbd5e1; /* slate-300 */
+}
+.markdown-content th, .markdown-content td {
+  border: 1px solid #e2e8f0; /* slate-200 */
+  padding: 0.5rem 1rem;
+  text-align: left;
+}
+.markdown-content th {
+  background-color: #f8fafc; /* slate-50 */
+  font-weight: bold;
+}
+.markdown-content tr:nth-child(even) {
+  background-color: rgba(248, 250, 252, 0.5); /* slate-50/50 */
+}
